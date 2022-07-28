@@ -1,4 +1,3 @@
-import "../css/style.scss";
 let offset = 0;
 const left = document.querySelector('.left');
 const right = document.querySelector('.right');
@@ -12,7 +11,6 @@ right.addEventListener('click', function () {
         right.setAttribute('disabled', 'disabled');
         right.classList.add("disabled");
     }
-    console.log("click");
     slider.style.left = -offset + 'px';
 });
 left.addEventListener('click', function () {
@@ -26,6 +24,3 @@ left.addEventListener('click', function () {
     }
     slider.style.left = -offset + 'px';
 });
-
-
-
