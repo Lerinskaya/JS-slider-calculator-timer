@@ -1,5 +1,7 @@
 import "../css/style.scss";
-import "./slider";
+import "../css/calc.scss";
+import "./slider.js";
+import "./calc.js";
 
 
 
