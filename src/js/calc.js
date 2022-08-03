@@ -29,26 +29,3 @@ dot.addEventListener('click', function () {
         result.value = '0';
     }
 });
-
-// event.target.classList.contains('operator') &&
-
-
-
-
-
-
-// operator.addEventListener('click', function () {
-//     if (result.innerText = '') {
-//         operator.setAttribute('disabled', 'disabled')
-//         console.log('click')
-//     }
-// });
-    // result.onkeypress = e => !(e.key === "." && ~result.value.indexOf("."))
-
-
-// const div = document.createElement('div')
-// div.classList.add('keyboard')
-// document.querySelector('.calc').appendChild(div);
-// document.addEventListener('keydown', event => {
-//     if ((event.key).match(/[0-9%\/*\-+\(\)=]|Backspace|Enter/)) calc(event.key)
-// })
