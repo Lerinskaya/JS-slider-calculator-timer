@@ -36,14 +36,26 @@ plus.addEventListener('click', function () {
     } else {
         breakMinutes = minutes.innerHTML - 1;
     }
+    if (interval) {
+        workMinutes = minutes.innerHTML;
+        breakMinutes = minutes.innerHTML
+    }
 });
 
 minus.addEventListener('click', function () {
-    minutes.innerHTML--;
+    if (minutes.innerHTML < 0) {
+        minutes.innerHTML = 0
+    } else {
+        minutes.innerHTML--;
+    }
     if (workMode.classList.contains('active')) {
         workMinutes = minutes.innerHTML - 1;
     } else {
         breakMinutes = minutes.innerHTML - 1;
+    }
+    if (interval) {
+        workMinutes = minutes.innerHTML;
+        breakMinutes = minutes.innerHTML
     }
 });
 
@@ -126,6 +138,10 @@ breakMode.addEventListener('click', function () {
 
 reset.addEventListener('click', function () {
     clearInterval(interval);
-    minutes.innerHTML = workTime;
     seconds.innerHTML = '00';
+    if (workMode.classList.contains('active')) {
+        minutes.innerHTML = workTime;
+    } else {
+        minutes.innerHTML = breakTime;
+    }
 });

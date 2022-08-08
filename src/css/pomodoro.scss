@@ -1,13 +1,8 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-}
-
 $red: rgb(248, 38, 80);
 $blue: rgb(41, 41, 114);
 $white: aliceblue;
 $shadow: rgba(203, 231, 253, 0.39);
-$white2: rgb(213, 219, 222);
+$smoke-white: rgb(213, 219, 222);
 $btnColor: rgb(107, 107, 185);
 
 .pomodoro {
@@ -98,7 +93,7 @@ $btnColor: rgb(107, 107, 185);
                 flex-direction: row;
                 position: relative;
                 font-size: 4.5rem;
-                color: $white2;
+                color: $smoke-white;
             }
 
             .time p:nth-of-type(2) {
@@ -121,7 +116,7 @@ $btnColor: rgb(107, 107, 185);
                 border: none;
                 border-radius: 10%;
                 color: $white;
-                background-color: rgb(41, 41, 114);
+                background-color: $blue;
                 -webkit-box-shadow: 0px 0px 16px 5px $shadow;
                 -moz-box-shadow: 0px 0px 16px 5px $shadow;
                 box-shadow: 0px 0px 16px 5px $shadow;
