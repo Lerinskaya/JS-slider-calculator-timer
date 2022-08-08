@@ -5,7 +5,8 @@ const workMode = document.querySelector('.work'),
     reset = document.querySelector('.reset'),
     bell = document.querySelector('.bell'),
     plus = document.querySelector('.plus'),
-    minus = document.querySelector('.minus');
+    minus = document.querySelector('.minus'),
+    pomodoro = document.querySelector('.pomodoro');
 
 let workTime = 2;
 let breakTime = 1;
@@ -33,7 +34,7 @@ plus.addEventListener('click', function () {
     if (workMode.classList.contains('active')) {
         workMinutes = minutes.innerHTML - 1;
     } else {
-        breakMinutes = minutes.innerHTML;
+        breakMinutes = minutes.innerHTML - 1;
     }
 });
 
@@ -42,7 +43,7 @@ minus.addEventListener('click', function () {
     if (workMode.classList.contains('active')) {
         workMinutes = minutes.innerHTML - 1;
     } else {
-        breakMinutes = minutes.innerHTML;
+        breakMinutes = minutes.innerHTML - 1;
     }
 });
 
@@ -50,19 +51,36 @@ start.addEventListener('click', () => {
     clearInterval(interval);
     if (seconds.innerHTML = '00') {
         secondsValue = 59
-    };
-
+    }
     interval = setInterval(timerFunction, 1000);
 });
 
 stopBtn.addEventListener('click', function () {
-    clearInterval(interval);
-    interval = null;
+    if (stopBtn.innerHTML === 'resume') {
+        stopBtn.innerHTML = 'stop';
+    } else {
+        stopBtn.innerHTML = 'resume';
+    }
+    if (interval) {
+        clearInterval(interval);
+        interval = null;
+    } else {
+        interval = setInterval(timerFunction, 1000);
+    }
 });
 
 timerFunction = () => {
-    minutes.innerHTML = workMinutes;
-    seconds.innerHTML = secondsValue;
+    if (breakMode.classList.contains('active')) {
+        minutes.innerHTML = breakMinutes;
+        seconds.innerHTML = secondsValue;
+        if (breakMinutes === 0 && secondsValue === '00') {
+            breakMode.classList.remove('active');
+            workMode.classList.add('active');
+        }
+    } else {
+        minutes.innerHTML = workMinutes;
+        seconds.innerHTML = secondsValue;
+    }
 
     secondsValue = secondsValue - 1;
 
@@ -71,12 +89,12 @@ timerFunction = () => {
         if (workMinutes < 0) {
             if (breakCount % 2 === 0) {
                 workMinutes = breakMinutes;
-                breakCount++
+                breakCount++;
                 workMode.classList.remove('active');
                 breakMode.classList.add('active');
             } else {
                 workMinutes = workTime - 1;
-                breakCount++
+                breakCount++;
                 breakMode.classList.remove('active');
                 workMode.classList.add('active');
             }
@@ -86,10 +104,10 @@ timerFunction = () => {
     if (secondsValue < 10) {
         secondsValue = '0' + secondsValue;
     }
-    // if (workMinutes === 0 && secondsValue === '01') {
-    //     bell.play();
-    // }
-}
+    if (workMinutes === 0 && secondsValue === '01') {
+        bell.play();
+    }
+};
 
 
 workMode.addEventListener('click', function () {
