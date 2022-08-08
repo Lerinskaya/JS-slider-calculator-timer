@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
@@ -56,6 +59,34 @@
 
             <button type="button" class="calc__btn calc__btn-resert">C</button>
             <button type="button" class="calc__btn calc__btn-equal">=</button>
+        </div>
+    </section>
+    <section class="pomodoro">
+        <div class="timer__container">
+            <h1 class="pomodoro__title">Pomodoro</h1>
+            <div class="timer__panel">
+                <p class="work">work</p>
+                <p class="break">break</p>
+            </div>
+            <div class="timer__field">
+                <div class="plus">+</div>
+                <div class="timer">
+                    <div class="timer__circle">
+                        <div class="time">
+                            <p class="minutes"></p>
+                            <p>:</p>
+                            <p class="seconds"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="minus">-</div>
+            </div>
+            <!-- <audio class="bell" src="./audio/audio.wav"></audio> -->
+            <div class="timer_buttons">
+                <button class="button__time start">start</button>
+                <button class="button__time stop">stop</button>
+                <button class="button__time reset">reset</button>
+            </div>
         </div>
     </section>
 </body>
