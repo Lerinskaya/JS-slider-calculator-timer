@@ -8,17 +8,17 @@ const workMode = document.querySelector('.work'),
     minus = document.querySelector('.minus'),
     pomodoro = document.querySelector('.pomodoro');
 
-let workTime = 2;
-let breakTime = 1;
+let workTime = 2,
+    breakTime = 1;
 
 let secondsValue;
 let interval;
 
-let minutes = document.querySelector('.minutes');
-let seconds = document.querySelector('.seconds');
+let minutes = document.querySelector('.minutes'),
+    seconds = document.querySelector('.seconds');
 
-let workMinutes = workTime - 1;
-let breakMinutes = breakTime - 1;
+let workMinutes = workTime - 1,
+    breakMinutes = breakTime - 1;
 
 breakCount = 0;
 
@@ -37,14 +37,14 @@ plus.addEventListener('click', function () {
         breakMinutes = minutes.innerHTML - 1;
     }
     if (interval) {
-        workMinutes = minutes.innerHTML;
-        breakMinutes = minutes.innerHTML
+        workMinutes = minutes.innerHTML - 1;
+        breakMinutes = minutes.innerHTML - 1;
     }
 });
 
 minus.addEventListener('click', function () {
     if (minutes.innerHTML < 0) {
-        minutes.innerHTML = 0
+        minutes.innerHTML = 0;
     } else {
         minutes.innerHTML--;
     }
@@ -55,14 +55,14 @@ minus.addEventListener('click', function () {
     }
     if (interval) {
         workMinutes = minutes.innerHTML;
-        breakMinutes = minutes.innerHTML
+        breakMinutes = minutes.innerHTML;
     }
 });
 
 start.addEventListener('click', () => {
     clearInterval(interval);
     if (seconds.innerHTML = '00') {
-        secondsValue = 59
+        secondsValue = 59;
     }
     interval = setInterval(timerFunction, 1000);
 });
