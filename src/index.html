@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="weather">
+        <div class="weather__app">
+            <div class="app__title">
+                <img class="arrow" src="./assets/arrow1.png" alt="back">
+                <p>the weather</p>
+            </div>
+            <div class="app__settings">
+                <div class="city__input">
+                    <p class="info__city">Введите город</p>
+                    <input class="weather__input" type="text" placeholder="Название города">
+                </div>
+                <div class="or"></div>
+                <button class="btn__location">Определить местоположение</button>
+            </div>
+            <div class="current__weather">
+                <div class="location">
+                    <span></span>
+                </div>
+                <div class="temperature">
+                    <span class="number"></span>
+                    <span class="deg">°C</span>
+                </div>
+                <img class="icon" src='#' alt="sunny">
+                <div class="weather__type"></div>
+            </div>
+        </div>
+    </section>
+    <section class="slider__wrap">
+        <h1 class="title">Slider</h1>
+        <div class="wrapper">
+            <button class="left" type="button"></button>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slider__item"><img class="slider__image" src="./assets/1.svg" alt="img"></div>
+                    <div class="slider__item"><img class="slider__image" src="./assets/2.svg" alt="img"></div>
+                    <div class="slider__item"><img class="slider__image" src="./assets/3.svg" alt="img"></div>
+                    <div class="slider__item"><img class="slider__image" src="./assets/4.svg" alt="img"></div>
+                    <div class="slider__item"><img class="slider__image" src="./assets/5.svg" alt="img"></div>
+                    <div class="slider__item"><img class="slider__image" src="./assets/6.svg" alt="img"></div>
+                    <div class="slider__item"><img class="slider__image" src="./assets/7.svg" alt="img"></div>
+                    <div class="slider__item"><img class="slider__image" src="./assets/8.svg" alt="img"></div>
+                    <div class="slider__item"><img class="slider__image" src="./assets/9.svg" alt="img"></div>
+                    <div class="slider__item"><img class="slider__image" src="./assets/10.svg" alt="img"></div>
+                </div>
+            </div>
+            <button class="right"></button>
+        </div>
+    </section>
+    <section class="calc__container">
+        <h1 class="title">Calculator</h1>
+        <div class="calc">
+            <output class="calc__result"></output>
+            <button type="button" class="calc__btn">7</button>
+            <button type="button" class="calc__btn">8</button>
+            <button type="button" class="calc__btn">9</button>
+            <button type="button" class="calc__btn operator">+</button>
+
+            <button type="button" class="calc__btn">4</button>
+            <button type="button" class="calc__btn">5</button>
+            <button type="button" class="calc__btn">6</button>
+            <button type="button" class="calc__btn">-</button>
+
+            <button type="button" class="calc__btn">1</button>
+            <button type="button" class="calc__btn">2</button>
+            <button type="button" class="calc__btn">3</button>
+            <button type="button" class="calc__btn operator">*</button>
+
+            <button type="button" class="calc__btn zero__btn">0</button>
+            <button type="button" class="calc__btn dot__btn">.</button>
+            <button type="button" class="calc__btn">00</button>
+            <button type="button" class="calc__btn operator">/</button>
+
+            <button type="button" class="calc__btn calc__btn-resert">C</button>
+            <button type="button" class="calc__btn calc__btn-equal">=</button>
+        </div>
+    </section>
+    <section class="pomodoro">
+        <div class="timer__container">
+            <h1 class="pomodoro__title">Pomodoro</h1>
+            <div class="timer__panel">
+                <p class="work">work</p>
+                <p class="break">break</p>
+            </div>
+            <div class="timer__field">
+                <div class="plus">+</div>
+                <div class="timer">
+                    <div class="timer__circle">
+                        <div class="time">
+                            <p class="minutes"></p>
+                            <p>:</p>
+                            <p class="seconds"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="minus">-</div>
+            </div>
+            <audio class="bell" src="./audio/audio.mp3"></audio>
+            <div class="timer_buttons">
+                <button class="button__time start">start</button>
+                <button class="button__time stop">stop</button>
+                <button class="button__time reset">reset</button>
+            </div>
+        </div>
+    </section>
+</body>
