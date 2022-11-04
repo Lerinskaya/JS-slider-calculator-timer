@@ -48,17 +48,18 @@ function weatherDetails(data) {
         document.querySelector('.location').innerText = `${city}, ${country}`;
 
         if (id == 800) {
-            weatherIcon.src = './assets/sunny.png';
+            weatherIcon.src = 'https://cdn-icons-png.flaticon.com/512/1163/1163713.png';
         } else if (id >= 200 && id <= 232) {
-            weatherIcon.src = './assets/stormy.png';
+            weatherIcon.src = 'https://cdn-icons-png.flaticon.com/512/1163/1163683.png';
         } else if (id >= 300 && id <= 321 || id >= 500 && id <= 531) {
-            weatherIcon.src = './assets/rainy.png';
+            weatherIcon.src = 'https://cdn-icons-png.flaticon.com/512/1163/1163677.png';
         } else if (id >= 600 && id <= 622) {
-            weatherIcon.src = './assets/snowy.png';
+            weatherIcon.src = 'https://cdn-icons-png.flaticon.com/512/1163/1163705.png';
         } else if (id >= 801 && id <= 804) {
-            weatherIcon.src = './assets/cloudy.png';
+            weatherIcon.src = 'https://cdn-icons-png.flaticon.com/512/1163/1163685.png';
         } else if (id >= 701 && id <= 781) {
-            weatherIcon.src = './assets/haze.png';
+            weatherIcon.src = 'https://cdn-icons-png.flaticon.com/512/1163/1163724.png';
+
         }
         weather.classList.add('active');
     }
