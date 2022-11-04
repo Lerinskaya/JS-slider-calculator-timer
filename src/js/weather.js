@@ -59,6 +59,7 @@ function weatherDetails(data) {
             weatherIcon.src = 'https://cdn-icons-png.flaticon.com/512/1163/1163685.png';
         } else if (id >= 701 && id <= 781) {
             weatherIcon.src = 'https://cdn-icons-png.flaticon.com/512/1163/1163724.png';
+
         }
         weather.classList.add('active');
     }
