@@ -8,8 +8,8 @@ const workMode = document.querySelector('.work'),
     minus = document.querySelector('.minus'),
     pomodoro = document.querySelector('.pomodoro');
 
-let workTime = 2,
-    breakTime = 1;
+let workTime = 25,
+    breakTime = 5;
 
 let secondsValue;
 let interval;
