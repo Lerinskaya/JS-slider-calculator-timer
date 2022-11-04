@@ -1,1 +1,1 @@
-# https://lerinskaya.github.io/JS-slider-calculator-timer/src
+# https://lerinskaya.github.io/JS-slider-calculator-timer
