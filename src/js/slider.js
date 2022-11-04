@@ -7,7 +7,7 @@ right.addEventListener('click', function () {
     left.removeAttribute('disabled');
     left.classList.remove("disabled");
     offset += 960;
-    if (offset === 1920) {
+    if (offset >= 1920) {
         right.setAttribute('disabled', 'disabled');
         right.classList.add("disabled");
     }
